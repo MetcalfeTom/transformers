@@ -40,7 +40,7 @@ from ...modeling_outputs import (
     BaseModelOutputWithPastAndCrossAttentions,
     Seq2SeqLMOutput,
     Seq2SeqModelOutput,
-    Seq2SeqSequenceClassifierOutput
+    Seq2SeqSequenceClassifierOutput,
 )
 from ...modeling_utils import PreTrainedModel, find_pruneable_heads_and_indices, prune_linear_layer
 from ...utils import logging
@@ -1826,6 +1826,7 @@ class T5EncoderModel(T5PreTrainedModel):
         )
 
         return encoder_outputs
+
 
 class T5ClassificationHead(nn.Module):
     """Head for sentence-level classification tasks."""
